@@ -1,0 +1,8 @@
+La finalidad de este proyecto es poder hacer una aplicación
+- Administrar stock 
+- Simular venta 
+- visualizar a futuro
+donde es necesario identificar lo que debemos hacer(identificar los diferntes nivel de abstracción)
+definir un objetivo claro, dado que actualmente contamos con 3, pero se espera que se pueda cumplir con almenos 2 de estas
+lenguajes de programación a usar por definir, pero nuestras opciones son: Java, JavaScript, Phyton
+para base de datos tenemos la opcones de MySQL, FireBase(usando FireStore), MariaDB
