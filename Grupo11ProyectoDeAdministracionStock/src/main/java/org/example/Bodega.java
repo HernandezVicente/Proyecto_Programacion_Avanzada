@@ -8,6 +8,21 @@ public class Bodega {
     private int capacidadActual; //(2^31)-1 == 2147483647
     ArrayList<Producto> productos;
 
+    public Bodega(long codigo, int capacidadMaxima, int capacidadActual) {
+        this.codigo = codigo;
+        this.capacidadMaxima = capacidadMaxima;
+        this.capacidadActual = capacidadActual;
+        this.productos = new ArrayList<>();
+    }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+
+    public int getCapacidadActual() {
+        return capacidadActual;
+    }
+
     @Override
     public String toString() {
         return "Bodega{" +

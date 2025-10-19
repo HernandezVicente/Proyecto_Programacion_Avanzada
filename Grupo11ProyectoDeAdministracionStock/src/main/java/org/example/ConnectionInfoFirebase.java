@@ -12,7 +12,6 @@ public class ConnectionInfoFirebase {
     public String getCredetials() {
         return credetials;
     }
-
     public void setCredetials(String credetials) {
         this.credetials = credetials;
     }
@@ -20,7 +19,6 @@ public class ConnectionInfoFirebase {
     public String getPath() {
         return path;
     }
-
     public void setPath(String path) {
         this.path = path;
     }
