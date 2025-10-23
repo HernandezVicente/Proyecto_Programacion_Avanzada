@@ -1,14 +1,10 @@
-package org.example;
+package org.example.Logica;
 
-import java.util.ArrayList;
+import org.example.Modelo.Bodega;
+import org.example.Modelo.Estante;
+import org.example.Modelo.Producto;
 
-public class Administrador {
-    private String surname;
-    private String password;
-    private ArrayList<Producto> productos;
-    private ArrayList<Bodega> bodegas;
-    private ArrayList<Estante> estantes;
-    Funcione funcione = new Funcione();
+public class LogicaAdministrador {
 
     public void agregarProducto(){
         //agregar un producto a la lista
@@ -27,7 +23,7 @@ public class Administrador {
     }
 
     public void agregarBodega(){
-        bodegas.add(new Bodega(funcione.leerLong(), funcione.leerInt(), funcione.leerInt()));
+        bodegas.add(new Bodega(funcione.leerLong(), funcione.leerInt()));
     }
     public void verBodega(){
         System.out.println(bodegas.toString());
@@ -46,30 +42,7 @@ public class Administrador {
 
     public void pedirMasProducto(){}
     public void calcularCapacidadDisponibleBodega(){
-
+        System.out.println(bodegas);
     }
     public void calcularCapacidadDisponibleEstante(){}
-
-    Administrador(){
-        this.surname = "Vicente";
-        this.password = "secreto123";
-        this.productos = new ArrayList<>();
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public String toString() {
-        return "Administrador{"+
-                "productos=" + productos +
-                '}';
-    }
-
-
 }
