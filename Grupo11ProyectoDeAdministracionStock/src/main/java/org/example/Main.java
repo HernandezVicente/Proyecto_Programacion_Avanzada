@@ -1,60 +1,79 @@
 package org.example;
 
-import org.example.BaseDeDatos.FirebaseCRUD;
-import org.example.Logica.FuncionEcencial;
-import org.example.Logica.Funcione;
-import org.example.Modelo.Administrador;
-import org.example.Modelo.Cliente;
+import org.example.logica.ConexionFirebase;
+
+import org.example.logica.CRUDFireStore;
+import org.example.modelo.Producto;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        //modelos vista controlador
-        //capa modelo
-        //capa logica
-        //capa de vistas
-
-        //JavaServer Pages (JSP)
-
-        //inversión de dependencia
-
-
-        //En Firestore Database de inicia una coleción, donde se puede agregar un documento, y dento de documento se puede iniciar otra colección, aparentemente se puede hacer n veces
-        FuncionEcencial operaciones = new FuncionEcencial();
-        FirebaseCRUD crud = new FirebaseCRUD(operaciones.connetarBaseDeDatos());
-        operaciones.crear(crud);
-        operaciones.leer(crud);
-        operaciones.actualizar(crud);
-        operaciones.borrar(crud);
-
-
-        Funcione funcione = new Funcione();
-        Administrador administrador = new Administrador();
-        System.out.println("Iniando Seción");
-        if(funcione.leerString().equals(administrador.getSurname())){
-            if (funcione.leerString().equals(administrador.getPassword())){
-                System.out.println("Administrado iniciado");
-            }
+        try {
+            ConexionFirebase.conectar();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        CRUDFireStore<Producto> crud = new CRUDFireStore<>("productos", Producto.class);
+        Scanner sc = new Scanner(System.in);
+        int opcion;
 
-        administrador.agregarBodega();
-        administrador.agregarEstante();
-        administrador.agregarBodega();
-        administrador.verProducto();
-        administrador.verBodega();
-        administrador.verEstante();
-        administrador.acualizarBodega();
-        administrador.acualizarEstante();
-        administrador.acualizarProducto();
-        administrador.eliminarBodega();
-        administrador.eliminarEstante();
-        administrador.eliminarProducto();
-        administrador.calcularCapacidadDisponibleBodega();
-        administrador.calcularCapacidadDisponibleEstante();
+        do {
+            System.out.println("\n=== CRUD PRODUCTOS (Firebase) ===");
+            System.out.println("1. Crear producto");
+            System.out.println("2. Mostrar todos");
+            System.out.println("3. Actualizar producto");
+            System.out.println("4. Eliminar producto");
+            System.out.println("5. Buscar por ID");
+            System.out.println("0. Salir");
+            System.out.print("👉 Opción: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
 
-        Cliente cliente = new Cliente();
-        System.out.println(cliente);
-
-        Cliente cliente2 = new Cliente("21.847.674-0");
-        System.out.println(cliente2);
+            switch (opcion) {
+                case 1 -> {
+                    System.out.print("ID del producto: ");
+                    String id = sc.nextLine();
+                    System.out.print("Nombre: ");
+                    String nombre = sc.nextLine();
+                    System.out.print("Precio: ");
+                    double precio = sc.nextDouble();
+                    System.out.print("Stock: ");
+                    int stock = sc.nextInt();
+                    crud.crear(id, new Producto(nombre, precio, stock));
+                }
+                case 2 -> {
+                    System.out.println("\n📦 Lista de productos:");
+                    crud.leerTodos().forEach(System.out::println);
+                }
+                case 3 -> {
+                    System.out.print("ID del producto a actualizar: ");
+                    String id = sc.nextLine();
+                    System.out.print("Nuevo nombre: ");
+                    String nombre = sc.nextLine();
+                    System.out.print("Nuevo precio: ");
+                    double precio = sc.nextDouble();
+                    System.out.print("Nuevo stock: ");
+                    int stock = sc.nextInt();
+                    crud.actualizar(id, new Producto(nombre, precio, stock));
+                }
+                case 4 -> {
+                    System.out.print("ID del producto a eliminar: ");
+                    String id = sc.nextLine();
+                    crud.eliminar(id);
+                }
+                case 5 -> {
+                    System.out.print("ID del producto: ");
+                    String id = sc.nextLine();
+                    crud.leerPorId(id).ifPresentOrElse(
+                            System.out::println,
+                            () -> System.out.println("No se encontró el producto.")
+                    );
+                }
+                case 0 -> System.out.println("👋 Saliendo...");
+                default -> System.out.println("❌ Opción no válida.");
+            }
+        } while (opcion != 0);
     }
 }
+
+
