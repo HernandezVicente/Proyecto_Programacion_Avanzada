@@ -18,4 +18,21 @@ public class LogicaAdministrador {
                 .findFirst()
                 .orElse(null);
     }
+
+    public void createBodega(){}
+    public void readBodega(){}
+    public void updateBodega(){}
+    public void deleteBodega(){}
+
+    public void createEstante(){}
+    public void readEstante(){}
+    public void updateEstante(){}
+    public void deleteEstante(){}
+
+    public void createProducto(){}
+    public void readProducto(){}
+    public void updateProducto(){}
+    public void deleteProducto(){}
+
+
 }

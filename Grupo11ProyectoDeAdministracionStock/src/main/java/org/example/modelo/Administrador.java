@@ -11,9 +11,4 @@ public class Administrador {
 
     public String getNombreUsuario() { return nombreUsuario; }
     public String getContraseña() { return contraseña; }
-
-    @Override
-    public String toString() {
-        return "Administrador{" + "nombreUsuario='" + nombreUsuario + '\'' + '}';
-    }
 }
