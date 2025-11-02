@@ -1,9 +1,11 @@
 package org.example.modelo;
 
 public class Estante {
-    private final long codigo;
-    private final int capacidadMaxima;
+    private long codigo;
+    private int capacidadMaxima;
     private int capacidadActual;
+
+    public Estante() {}
 
     public Estante(long codigo, int capacidadMaxima) {
         this.codigo = codigo;
@@ -11,15 +13,20 @@ public class Estante {
         this.capacidadActual = 0;
     }
 
-    public long getCodigo() {
-        return codigo;
-    }
+    public long getCodigo() { return codigo; }
+    public int getCapacidadMaxima() { return capacidadMaxima; }
+    public int getCapacidadActual() { return capacidadActual; }
 
-    public int getCapacidadMaxima() {
-        return capacidadMaxima;
-    }
+    public void setCodigo(long codigo) { this.codigo = codigo; }
+    public void setCapacidadMaxima(int capacidadMaxima) { this.capacidadMaxima = capacidadMaxima; }
+    public void setCapacidadActual(int capacidadActual) { this.capacidadActual = capacidadActual; }
 
-    public int getCapacidadActual() {
-        return capacidadActual;
+    @Override
+    public String toString() {
+        return "Estante{" +
+                "codigo=" + codigo +
+                ", capacidadMaxima=" + capacidadMaxima +
+                ", capacidadActual=" + capacidadActual +
+                '}';
     }
 }
