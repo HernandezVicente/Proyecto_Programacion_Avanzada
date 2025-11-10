@@ -12,6 +12,8 @@ import java.util.List;
 public class BodegaServlet extends HttpServlet {
     private final LogicaBodega logica = new LogicaBodega();
 
+    //este es un comentario en java
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
