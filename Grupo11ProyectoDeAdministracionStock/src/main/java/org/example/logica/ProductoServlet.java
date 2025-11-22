@@ -13,7 +13,7 @@ public class ProductoServlet extends HttpServlet {
     private final LogicaProducto logica = new LogicaProducto();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String accion = request.getParameter("accion");

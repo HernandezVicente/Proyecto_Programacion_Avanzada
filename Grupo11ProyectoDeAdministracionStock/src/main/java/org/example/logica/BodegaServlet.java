@@ -13,7 +13,7 @@ public class BodegaServlet extends HttpServlet {
     private final LogicaBodega logica = new LogicaBodega();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         String accion = request.getParameter("accion");
