@@ -10,7 +10,21 @@ import java.util.List;
 
 @WebServlet("/BodegaServlet")
 public class BodegaServlet extends HttpServlet {
-    private final LogicaBodega logica = new LogicaBodega();
+    private LogicaBodega logica;
+
+    public BodegaServlet() {
+        this.logica = new LogicaBodega();
+    }
+
+    public BodegaServlet(LogicaBodega logica) {
+        this.logica = logica;
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        refrescarLista(request, response);
+    }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -20,74 +34,88 @@ public class BodegaServlet extends HttpServlet {
 
         try {
             switch (accion) {
-                case "crear": {
-                    String idStr = request.getParameter("id");
-                    String nombre = request.getParameter("nombre");
-                    String direccion = request.getParameter("direccion");
-                    String capacidadStr = request.getParameter("capacidad");
-
-                    if (idStr == null || idStr.isEmpty() ||
-                            nombre == null || nombre.isEmpty() ||
-                            direccion == null || direccion.isEmpty() ||
-                            capacidadStr == null || capacidadStr.isEmpty()) {
-                        request.setAttribute("error", "Todos los campos son obligatorios para crear una bodega.");
-                        break;
-                    }
-
-                    long id = Long.parseLong(idStr);
-                    int capacidad = Integer.parseInt(capacidadStr);
-
-                    Bodega nueva = new Bodega(id, nombre, direccion, capacidad);
-                    logica.crearBodega(nueva);
+                case "crear":
+                    crearBodega(request);
                     break;
-                }
-
-                case "actualizar": {
-                    String idStr = request.getParameter("id");
-                    String capacidadStr = request.getParameter("capacidad");
-
-                    if (idStr == null || idStr.isEmpty() ||
-                            capacidadStr == null || capacidadStr.isEmpty()) {
-                        request.setAttribute("error", "Debe indicar ID y nueva capacidad para actualizar.");
-                        break;
-                    }
-
-                    long id = Long.parseLong(idStr);
-                    int capacidad = Integer.parseInt(capacidadStr);
-
-                    logica.actualizarCapacidad(id, capacidad);
+                case "actualizar":
+                    actualizarBodega(request);
                     break;
-                }
-
-                case "eliminar": {
-                    String idStr = request.getParameter("id");
-                    if (idStr == null || idStr.isEmpty()) {
-                        request.setAttribute("error", "Debe indicar el ID de la bodega a eliminar.");
-                        break;
-                    }
-
-                    long id = Long.parseLong(idStr);
-                    logica.eliminarBodega(id);
+                case "eliminar":
+                    eliminarBodega(request);
                     break;
-                }
-
-                case "listar": {
-                    // No requiere parámetros
+                case "listar":
                     break;
-                }
-
                 default:
                     request.setAttribute("error", "Acción no reconocida.");
             }
-
-            // 🧩 Refresca la lista después de cualquier acción
-            List<Bodega> bodegas = logica.listarBodegas();
-            request.setAttribute("bodegas", bodegas);
-            request.getRequestDispatcher("bodegas.jsp").forward(request, response);
+            refrescarLista(request, response);
 
         } catch (NumberFormatException e) {
             request.setAttribute("error", "Error: uno de los campos numéricos no tiene formato válido.");
-            request.getRequestDispatcher("bodegas.jsp").forward(request, response);
+            try {
+                refrescarLista(request, response);
+            } catch (Exception ex) {
+                request.getRequestDispatcher("bodegas.jsp").forward(request, response);
+            }
         }
+    }
+
+    private void crearBodega(HttpServletRequest request) {
+        String idStr = request.getParameter("id");
+        String nombre = request.getParameter("nombre");
+        String direccion = request.getParameter("direccion");
+        String capacidadStr = request.getParameter("capacidad");
+
+        if (esInvalido(idStr) || esInvalido(nombre) || esInvalido(direccion) || esInvalido(capacidadStr)) {
+            request.setAttribute("error", "Todos los campos son obligatorios para crear una bodega.");
+            return;
+        }
+
+        long id = Long.parseLong(idStr);
+        int capacidad = Integer.parseInt(capacidadStr);
+
+        Bodega nueva = new Bodega(id, nombre, direccion, capacidad);
+        logica.crearBodega(nueva);
+    }
+
+    private void actualizarBodega(HttpServletRequest request) {
+        String idStr = request.getParameter("id");
+        String nombre = request.getParameter("nombre");
+        String direccion = request.getParameter("direccion");
+        String capacidadStr = request.getParameter("capacidad");
+
+        if (esInvalido(idStr) || esInvalido(nombre) || esInvalido(direccion) || esInvalido(capacidadStr)) {
+            request.setAttribute("error", "Todos los campos son obligatorios para actualizar.");
+            return;
+        }
+
+        long id = Long.parseLong(idStr);
+        int capacidad = Integer.parseInt(capacidadStr);
+
+        Bodega bodegaActualizada = new Bodega(id, nombre, direccion, capacidad);
+        logica.actualizarBodega(bodegaActualizada);
+    }
+
+    private void eliminarBodega(HttpServletRequest request) {
+        String idStr = request.getParameter("id");
+
+        if (esInvalido(idStr)) {
+            request.setAttribute("error", "Debe indicar el ID de la bodega a eliminar.");
+            return;
+        }
+
+        long id = Long.parseLong(idStr);
+        logica.eliminarBodega(id);
+    }
+
+    private void refrescarLista(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        List<Bodega> bodegas = logica.listarBodegas();
+        request.setAttribute("bodegas", bodegas);
+        request.getRequestDispatcher("bodegas.jsp").forward(request, response);
+    }
+
+    private boolean esInvalido(String valor) {
+        return valor == null || valor.trim().isEmpty();
     }
 }

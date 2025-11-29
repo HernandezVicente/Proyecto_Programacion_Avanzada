@@ -40,9 +40,8 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center mb-4">📦 Administración de Productos</h1>
+    <h1 class="text-center mb-4"> Administración de Productos</h1>
 
-    <!-- ====================== FORMULARIO ====================== -->
     <div class="form-section">
         <form id="formProducto" action="ProductoServlet" method="post">
             <div class="row">
@@ -81,13 +80,12 @@
         </form>
 
         <small class="text-muted d-block mt-2">
-            🔹 Agregar o actualizar requiere todos los campos.<br>
-            🔹 Eliminar requiere solo el <b>Código de Barra</b>.<br>
-            🔹 Listar no requiere llenar ningún campo.
+            Agregar o actualizar requiere todos los campos.<br>
+            Eliminar requiere solo el <b>Código de Barra</b>.<br>
+            Listar no requiere llenar ningún campo.
         </small>
     </div>
 
-    <!-- ====================== LISTADO DE PRODUCTOS ====================== -->
     <%
         List<Producto> productos = (List<Producto>) request.getAttribute("productos");
     %>
@@ -121,22 +119,17 @@
     <p class="text-center text-muted">👋 Usa los botones de arriba para comenzar.</p>
     <% } %>
 </div>
-
-<!-- ====================== SCRIPT ====================== -->
 <script>
     const form = document.getElementById("formProducto");
     const campos = ["codigoBarra", "nombre", "categoria", "precio", "cantidad"];
 
     document.querySelectorAll("button[name='accion']").forEach(btn => {
         btn.addEventListener("click", () => {
-            // Quitar todos los 'required'
             campos.forEach(c => document.getElementById(c).removeAttribute("required"));
 
             if (btn.value === "crear" || btn.value === "actualizar") {
-                // Requiere todos los campos
                 campos.forEach(c => document.getElementById(c).setAttribute("required", "required"));
             } else if (btn.value === "eliminar") {
-                // Solo requiere código de barra
                 document.getElementById("codigoBarra").setAttribute("required", "required");
             }
         });

@@ -29,7 +29,7 @@ public class EstanteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         try {
-          //  req.setAttribute("estantes", logica.listarEstantes());
+            //req.setAttribute("estantes", logica.listarEstantes());
             req.getRequestDispatcher("listarEstantes.jsp").forward(req, resp);
         } catch (Exception e) {
             e.printStackTrace();

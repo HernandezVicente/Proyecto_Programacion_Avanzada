@@ -6,10 +6,8 @@ public class Bodega {
     private String direccion;
     private int capacidad;
 
-    // 🔹 Constructor vacío (requerido por Firestore)
     public Bodega() {}
 
-    // 🔹 Constructor completo
     public Bodega(long id, String nombre, String direccion, int capacidad) {
         this.id = id;
         this.nombre = nombre;
@@ -17,7 +15,6 @@ public class Bodega {
         this.capacidad = capacidad;
     }
 
-    // 🔹 Getters
     public long getId() {return id;}
 
     public String getNombre() {return nombre;}

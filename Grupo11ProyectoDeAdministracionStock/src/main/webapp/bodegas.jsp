@@ -33,44 +33,51 @@
             background-color: #007bff;
             color: white;
         }
+        .btn-group button {
+            margin: 3px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center mb-4">🏭 Administración de Bodegas</h1>
+    <h1 class="text-center mb-4">Administración de Bodegas</h1>
 
-    <!-- FORMULARIO -->
     <div class="form-section">
-        <form action="BodegaServlet" method="post">
+        <form id="formBodega" action="BodegaServlet" method="post">
             <div class="row">
                 <div class="col-md-3 mb-3">
                     <label for="id" class="form-label">ID Bodega</label>
-                    <input type="number" class="form-control" id="id" name="id" required>
+                    <input type="number" class="form-control" id="id" name="id" placeholder="Ej: 10">
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Central">
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="direccion" class="form-label">Dirección</label>
-                    <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Ej: Av. Principal 123">
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="capacidad" class="form-label">Capacidad</label>
-                    <input type="number" class="form-control" id="capacidad" name="capacidad" required>
+                    <input type="number" class="form-control" id="capacidad" name="capacidad" placeholder="Ej: 500">
                 </div>
             </div>
 
-            <div class="text-center">
+            <div class="text-center btn-group">
                 <button type="submit" name="accion" value="crear" class="btn btn-success">➕ Agregar</button>
                 <button type="submit" name="accion" value="actualizar" class="btn btn-primary">✏️ Actualizar</button>
                 <button type="submit" name="accion" value="eliminar" class="btn btn-danger">🗑️ Eliminar</button>
                 <button type="submit" name="accion" value="listar" class="btn btn-secondary">🔄 Listar</button>
             </div>
         </form>
+
+        <small class="text-muted d-block mt-2">
+            Agregar o actualizar requiere todos los campos.<br>
+            Eliminar requiere solo el <b>ID Bodega</b>.<br>
+            Listar no requiere llenar ningún campo.
+        </small>
     </div>
 
-    <!-- LISTADO -->
     <%
         List<Bodega> bodegas = (List<Bodega>) request.getAttribute("bodegas");
         String error = (String) request.getAttribute("error");
@@ -81,7 +88,7 @@
     <% } %>
 
     <% if (bodegas != null && !bodegas.isEmpty()) { %>
-    <table class="table table-bordered table-striped text-center">
+    <table class="table table-bordered table-striped text-center align-middle">
         <thead>
         <tr>
             <th>ID</th>
@@ -102,8 +109,29 @@
         </tbody>
     </table>
     <% } else { %>
-    <p class="text-center text-muted">No hay bodegas registradas.</p>
+    <p class="text-center text-muted">No hay bodegas registradas o presiona "Listar".</p>
     <% } %>
 </div>
+
+<script>
+    const campos = ["id", "nombre", "direccion", "capacidad"];
+    document.querySelectorAll("button[name='accion']").forEach(btn => {
+        btn.addEventListener("click", () => {
+            campos.forEach(c => {
+                const input = document.getElementById(c);
+                if(input) input.removeAttribute("required");
+            });
+
+            if (btn.value === "crear" || btn.value === "actualizar") {
+                campos.forEach(c => {
+                    const input = document.getElementById(c);
+                    if(input) input.setAttribute("required", "required");
+                });
+            } else if (btn.value === "eliminar") {
+                document.getElementById("id").setAttribute("required", "required");
+            }
+        });
+    });
+</script>
 </body>
 </html>

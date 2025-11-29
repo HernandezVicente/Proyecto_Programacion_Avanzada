@@ -10,7 +10,15 @@ import java.util.List;
 
 @WebServlet("/ProductoServlet")
 public class ProductoServlet extends HttpServlet {
-    private final LogicaProducto logica = new LogicaProducto();
+    private LogicaProducto logica;
+
+    public ProductoServlet() {
+        this.logica = new LogicaProducto();
+    }
+
+    public ProductoServlet(LogicaProducto logica) {
+        this.logica = logica;
+    }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -20,78 +28,94 @@ public class ProductoServlet extends HttpServlet {
 
         try {
             switch (accion) {
-                case "crear": {
-                    // ✅ Validamos campos
-                    String codigoStr = request.getParameter("codigoBarra");
-                    String nombre = request.getParameter("nombre");
-                    String precioStr = request.getParameter("precio");
-                    String categoria = request.getParameter("categoria");
-                    String cantidadStr = request.getParameter("cantidad");
-
-                    if (codigoStr == null || codigoStr.isEmpty() ||
-                            nombre == null || nombre.isEmpty() ||
-                            precioStr == null || precioStr.isEmpty() ||
-                            categoria == null || categoria.isEmpty() ||
-                            cantidadStr == null || cantidadStr.isEmpty()) {
-                        request.setAttribute("error", "Todos los campos son obligatorios para crear un producto.");
-                        break;
-                    }
-
-                    long codigo = Long.parseLong(codigoStr);
-                    int precio = Integer.parseInt(precioStr);
-                    int cantidad = Integer.parseInt(cantidadStr);
-
-                    Producto nuevo = new Producto(codigo, nombre, precio, categoria, cantidad);
-                    logica.crearProducto(nuevo);
+                case "crear":
+                    crearProducto(request);
                     break;
-                }
-
-                case "actualizar": {
-                    String codigoStr = request.getParameter("codigoBarra");
-                    String cantidadStr = request.getParameter("cantidad");
-
-                    if (codigoStr == null || codigoStr.isEmpty() ||
-                            cantidadStr == null || cantidadStr.isEmpty()) {
-                        request.setAttribute("error", "Debe indicar código y cantidad para actualizar.");
-                        break;
-                    }
-
-                    long codigo = Long.parseLong(codigoStr);
-                    int cantidad = Integer.parseInt(cantidadStr);
-
-                    logica.actualizarProducto(codigo, cantidad);
+                case "actualizar":
+                    actualizarProducto(request);
                     break;
-                }
-
-                case "eliminar": {
-                    String codigoStr = request.getParameter("codigoBarra");
-                    if (codigoStr == null || codigoStr.isEmpty()) {
-                        request.setAttribute("error", "Debe indicar el código del producto a eliminar.");
-                        break;
-                    }
-
-                    long codigo = Long.parseLong(codigoStr);
-                    logica.eliminarProducto(codigo);
+                case "eliminar":
+                    eliminarProducto(request);
                     break;
-                }
-
-                case "listar": {
-                    // No requiere parámetros
+                case "listar":
                     break;
-                }
-
                 default:
                     request.setAttribute("error", "Acción no reconocida.");
             }
-
-            // 🧩 Refresca la lista después de cualquier acción
-            List<Producto> productos = logica.listarProductos();
-            request.setAttribute("productos", productos);
-            request.getRequestDispatcher("productos.jsp").forward(request, response);
+            refrescarLista(request, response);
 
         } catch (NumberFormatException e) {
             request.setAttribute("error", "Error: uno de los campos numéricos no tiene un formato válido.");
-            request.getRequestDispatcher("productos.jsp").forward(request, response);
+            try {
+                refrescarLista(request, response);
+            } catch (Exception ex) {
+                request.getRequestDispatcher("productos.jsp").forward(request, response);
+            }
         }
+    }
+
+    private void crearProducto(HttpServletRequest request) {
+        String codigoStr = request.getParameter("codigoBarra");
+        String nombre = request.getParameter("nombre");
+        String precioStr = request.getParameter("precio");
+        String categoria = request.getParameter("categoria");
+        String cantidadStr = request.getParameter("cantidad");
+
+        if (esInvalido(codigoStr) || esInvalido(nombre) || esInvalido(precioStr) ||
+                esInvalido(categoria) || esInvalido(cantidadStr)) {
+            request.setAttribute("error", "Todos los campos son obligatorios para crear un producto.");
+            return;
+        }
+
+        long codigo = Long.parseLong(codigoStr);
+        int precio = Integer.parseInt(precioStr);
+        int cantidad = Integer.parseInt(cantidadStr);
+
+        Producto nuevo = new Producto(codigo, nombre, precio, categoria, cantidad);
+        logica.crearProducto(nuevo);
+    }
+
+    private void actualizarProducto(HttpServletRequest request) {
+        String codigoStr = request.getParameter("codigoBarra");
+        String nombre = request.getParameter("nombre");
+        String precioStr = request.getParameter("precio");
+        String categoria = request.getParameter("categoria");
+        String cantidadStr = request.getParameter("cantidad");
+
+        if (esInvalido(codigoStr) || esInvalido(nombre) || esInvalido(precioStr) ||
+                esInvalido(categoria) || esInvalido(cantidadStr)) {
+            request.setAttribute("error", "Todos los campos son obligatorios para actualizar.");
+            return;
+        }
+
+        long codigo = Long.parseLong(codigoStr);
+        int precio = Integer.parseInt(precioStr);
+        int cantidad = Integer.parseInt(cantidadStr);
+
+        Producto productoActualizado = new Producto(codigo, nombre, precio, categoria, cantidad);
+        logica.actualizarProducto(productoActualizado);
+    }
+
+    private void eliminarProducto(HttpServletRequest request) {
+        String codigoStr = request.getParameter("codigoBarra");
+
+        if (esInvalido(codigoStr)) {
+            request.setAttribute("error", "Debe indicar el código del producto a eliminar.");
+            return;
+        }
+
+        long codigo = Long.parseLong(codigoStr);
+        logica.eliminarProducto(codigo);
+    }
+
+    private void refrescarLista(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        List<Producto> productos = logica.listarProductos();
+        request.setAttribute("productos", productos);
+        request.getRequestDispatcher("productos.jsp").forward(request, response);
+    }
+
+    private boolean esInvalido(String valor) {
+        return valor == null || valor.trim().isEmpty();
     }
 }

@@ -11,16 +11,17 @@ public class LogicaBodega {
         crud.guardar(String.valueOf(b.getId()), b);
     }
 
-    public Bodega obtenerBodega(long id) {
-        return crud.obtenerPorId(String.valueOf(id));
-    }
-
     public List<Bodega> listarBodegas() {
         return crud.obtenerTodos();
     }
 
-    public void actualizarCapacidad(long id, int nuevaCapacidad) {
-        crud.actualizarCampos(String.valueOf(id), Map.of("capacidad", nuevaCapacidad));
+    public void actualizarBodega(Bodega b) {
+        Map<String, Object> datos = Map.of(
+                "nombre", b.getNombre(),
+                "direccion", b.getDireccion(),
+                "capacidad", b.getCapacidad()
+        );
+        crud.actualizarCampos(String.valueOf(b.getId()), datos);
     }
 
     public void eliminarBodega(long id) {

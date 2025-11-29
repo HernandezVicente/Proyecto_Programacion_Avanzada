@@ -1,7 +1,5 @@
 package org.example.modelo;
 
-import java.util.ArrayList;
-
 public class Cliente {
     private String rut;
     private int dinero;

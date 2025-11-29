@@ -16,7 +16,6 @@ public class FirebaseInitializer implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         try {
-            // 👇 Buscar el archivo dentro del classpath (src/main/resources/)
             InputStream serviceAccount = getClass().getClassLoader().getResourceAsStream("administrarstock.json");
 
             if (serviceAccount == null) {
@@ -29,17 +28,17 @@ public class FirebaseInitializer implements ServletContextListener {
 
             if (FirebaseApp.getApps().isEmpty()) {
                 FirebaseApp.initializeApp(options);
-                System.out.println("✅ Firebase inicializado correctamente.");
+                System.out.println(" Firebase inicializado correctamente.");
             }
 
         } catch (IOException e) {
             e.printStackTrace();
-            System.err.println("❌ Error al inicializar Firebase: " + e.getMessage());
+            System.err.println(" Error al inicializar Firebase: " + e.getMessage());
         }
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        System.out.println("🧹 Firebase cerrado.");
+        System.out.println("Firebase cerrado.");
     }
 }

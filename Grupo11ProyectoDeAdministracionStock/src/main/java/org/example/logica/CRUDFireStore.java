@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 /**
- * 🔥 CRUDFireStore
+ * CRUDFireStore
  * Clase genérica para manejar operaciones CRUD (Create, Read, Update, Delete)
  * en Firestore, de forma flexible y reutilizable.
  *
@@ -34,7 +34,7 @@ public class CRUDFireStore<T> {
     }
 
     /**
-     * 🟢 Crea o actualiza un documento usando un ID específico
+     * Crea o actualiza un documento usando un ID específico
      * Si ya existe, se sobrescribe (update completo).
      *
      * @param id identificador del documento (por ejemplo, código de barra)
@@ -45,15 +45,15 @@ public class CRUDFireStore<T> {
             db.collection(collectionName)
                     .document(id)
                     .set(objeto)
-                    .get(); // Espera la operación
-            System.out.println("✅ Guardado correctamente en " + collectionName + " con ID: " + id);
+                    .get();
+            System.out.println(" Guardado correctamente en " + collectionName + " con ID: " + id);
         } catch (InterruptedException | ExecutionException e) {
-            System.err.println("❌ Error al guardar en Firestore: " + e.getMessage());
+            System.err.println(" Error al guardar en Firestore: " + e.getMessage());
         }
     }
 
     /**
-     * 🟡 Obtiene un documento específico por ID.
+     * Obtiene un documento específico por ID.
      *
      * @param id identificador del documento
      * @return objeto T o null si no existe
@@ -68,16 +68,16 @@ public class CRUDFireStore<T> {
             if (snapshot.exists()) {
                 return snapshot.toObject(typeClass);
             } else {
-                System.out.println("⚠️ Documento no encontrado: " + id);
+                System.out.println(" Documento no encontrado: " + id);
             }
         } catch (InterruptedException | ExecutionException e) {
-            System.err.println("❌ Error al obtener documento: " + e.getMessage());
+            System.err.println(" Error al obtener documento: " + e.getMessage());
         }
         return null;
     }
 
     /**
-     * 🔵 Obtiene todos los documentos de la colección.
+     *  Obtiene todos los documentos de la colección.
      *
      * @return lista con todos los objetos T
      */
@@ -92,15 +92,15 @@ public class CRUDFireStore<T> {
                 lista.add(objeto);
             }
 
-            System.out.println("📄 Se obtuvieron " + lista.size() + " documentos de " + collectionName);
+            System.out.println("Se obtuvieron " + lista.size() + " documentos de " + collectionName);
         } catch (InterruptedException | ExecutionException e) {
-            System.err.println("❌ Error al obtener documentos: " + e.getMessage());
+            System.err.println("Error al obtener documentos: " + e.getMessage());
         }
         return lista;
     }
 
     /**
-     * 🟠 Actualiza un documento existente.
+     * Actualiza un documento existente.
      * (Solo reemplaza los campos indicados, no todo el documento)
      *
      * @param id identificador del documento
@@ -112,14 +112,14 @@ public class CRUDFireStore<T> {
                     .document(id)
                     .update(datos)
                     .get();
-            System.out.println("✏️ Documento " + id + " actualizado correctamente.");
+            System.out.println(" Documento " + id + " actualizado correctamente.");
         } catch (InterruptedException | ExecutionException e) {
-            System.err.println("❌ Error al actualizar documento: " + e.getMessage());
+            System.err.println(" Error al actualizar documento: " + e.getMessage());
         }
     }
 
     /**
-     * 🔴 Elimina un documento por ID.
+     * Elimina un documento por ID.
      *
      * @param id identificador del documento
      */
@@ -129,9 +129,9 @@ public class CRUDFireStore<T> {
                     .document(id)
                     .delete()
                     .get();
-            System.out.println("🗑️ Documento " + id + " eliminado correctamente.");
+            System.out.println(" Documento " + id + " eliminado correctamente.");
         } catch (InterruptedException | ExecutionException e) {
-            System.err.println("❌ Error al eliminar documento: " + e.getMessage());
+            System.err.println(" Error al eliminar documento: " + e.getMessage());
         }
     }
 }
