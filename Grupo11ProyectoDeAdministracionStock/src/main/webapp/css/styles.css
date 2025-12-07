@@ -1,0 +1,76 @@
+/* =========================================
+   VARIABLES GLOBALES
+   ========================================= */
+:root {
+    --primary-color: #3498db;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --gradient-bg: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+/* Estilos base para TODA la app */
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    /* Por defecto el fondo es gris claro (para el panel de admin) */
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* =========================================
+   ESTILO 1: PANTALLAS DE ACCESO (Login, Index, Registro)
+   Usa la clase "modo-acceso" en el body
+   ========================================= */
+body.modo-acceso {
+    background: var(--gradient-bg);
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Texto blanco para contrastar con el azul */
+}
+
+/* Tarjeta con efecto Cristal (Glassmorphism) */
+.card-glass {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparencia */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
+    border-radius: 20px;
+    backdrop-filter: blur(8px); /* Efecto borroso detrás */
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    padding: 2rem;
+    text-align: center;
+    width: 350px; /* Ancho fijo para que se vea elegante */
+    margin: auto;
+}
+
+/* Botones personalizados para el Login */
+.btn-glass {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* =========================================
+   ESTILO 2: PANTALLAS DE ADMIN (Tablas, Formularios)
+   Usa la clase "modo-admin" (o ninguna) en el body
+   ========================================= */
+.container-admin {
+    margin-top: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    background: #e9f0fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

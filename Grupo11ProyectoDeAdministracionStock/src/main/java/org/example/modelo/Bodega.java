@@ -1,25 +1,38 @@
 package org.example.modelo;
 
 public class Bodega {
-    private final long codigo;
-    private final int capacidadMAxima;
-    private int capacidadActual;
+    private long id;
+    private String nombre;
+    private String direccion;
+    private int capacidad;
 
-    public Bodega(long codigo, int capacidadMAxima) {
-        this.codigo = codigo;
-        this.capacidadMAxima = capacidadMAxima;
-        this.capacidadActual = 0;
+    public Bodega() {}
+
+    public Bodega(long id, String nombre, String direccion, int capacidad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.capacidad = capacidad;
     }
 
-    public long getCodigo() {
-        return codigo;
+    public long getId() {return id;}
+    public String getNombre() {return nombre;}
+    public String getDireccion() {return direccion;}
+    public int getCapacidad() {return capacidad;}
+
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public int getCapacidadMAxima() {
-        return capacidadMAxima;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public int getCapacidadActual() {
-        return capacidadActual;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 }

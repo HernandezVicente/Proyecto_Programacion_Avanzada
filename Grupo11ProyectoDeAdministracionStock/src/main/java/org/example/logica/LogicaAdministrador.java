@@ -14,7 +14,7 @@ public class LogicaAdministrador {
     public Administrador login(String user, String password) {
         return administradores.stream()
                 .filter(a -> a.getNombreUsuario().equals(user)
-                        && a.getContraseña().equals(password))
+                        && a.getContrasenha().equals(password))
                 .findFirst()
                 .orElse(null);
     }
