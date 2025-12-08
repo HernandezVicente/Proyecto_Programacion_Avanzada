@@ -3,8 +3,11 @@
    ========================================= */
 :root {
     --primary-color: #3498db;
+    --primary-hover: #2980b9; /* Agregado para efectos hover */
     --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
     --gradient-bg: linear-gradient(135deg, #2c3e50, #3498db);
+    --card-bg: #ffffff;
+    --radius: 10px;
 }
 
 /* Estilos base para TODA la app */
@@ -73,4 +76,42 @@ body.modo-acceso {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+/* =========================================
+   ESTILOS DEL DASHBOARD (Tarjetas de Menú)
+   Agregado para que dashboardAdmin.jsp se vea bien
+   ========================================= */
+.card-menu {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e9ecef;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    text-decoration: none; /* Quita el subrayado de los links */
+}
+
+.card-menu:hover {
+    transform: translateY(-5px); /* Efecto de levitación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Botones genéricos del sistema */
+.btn-custom {
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+/* Tablas */
+.table-custom thead th {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none;
 }

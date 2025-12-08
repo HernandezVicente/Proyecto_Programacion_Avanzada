@@ -6,7 +6,7 @@ import com.google.firebase.cloud.FirestoreClient;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.logica.BodegaServlet;
+import org.example.controlador.BodegaServlet;
 import org.example.modelo.Bodega;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

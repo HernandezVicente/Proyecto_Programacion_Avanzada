@@ -6,7 +6,7 @@ import com.google.firebase.cloud.FirestoreClient;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.example.logica.ProductoServlet;
+import org.example.controlador.ProductoServlet;
 import org.example.modelo.Producto;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

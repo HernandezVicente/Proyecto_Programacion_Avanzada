@@ -7,19 +7,19 @@
 2025-12-06 17:45:57.354 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-06 17:46:40.758 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-06 17:48:46.787 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-06 17:49:19.397 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
-2025-12-06 17:50:28.715 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
+2025-12-06 17:49:19.397 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
+2025-12-06 17:50:28.715 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
 2025-12-06 17:57:00.072 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-06 17:57:37.837 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-06 17:58:12.836 [http-nio-8080-exec-10] INFO  org.example.logica.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
-2025-12-06 17:58:49.042 [http-nio-8080-exec-9] INFO  org.example.logica.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
+2025-12-06 17:58:12.836 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
+2025-12-06 17:58:49.042 [http-nio-8080-exec-9] INFO  org.example.controlador.RegistroServlet - Usuario registrado con éxito: v.hernandez09@ufromail.cl
 2025-12-06 17:59:32.152 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-06 18:14:08.886 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-06 18:14:09.269 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-06 18:22:03.786 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-06 18:22:25.351 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-06 18:28:50.734 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-06 18:29:26.034 [http-nio-8080-exec-1] WARN  org.example.logica.LoginAdminServlet - Intento fallido: Administrador no encontrado - v.hernandez09@ufromail.cl
+2025-12-06 18:29:26.034 [http-nio-8080-exec-1] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - v.hernandez09@ufromail.cl
 2025-12-06 18:29:51.370 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-06 18:51:14.832 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-06 18:52:08.243 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
@@ -66,65 +66,87 @@
 2025-12-07 19:17:32.318 [RMI TCP Connection(4)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-07 19:21:53.339 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 19:23:01.745 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 19:25:57.479 [http-nio-8080-exec-3] WARN  org.example.logica.LoginAdminServlet - Intento fallido: Administrador no encontrado - v.hernandez09@ufromail.cl
+2025-12-07 19:25:57.479 [http-nio-8080-exec-3] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - v.hernandez09@ufromail.cl
 2025-12-07 19:26:58.180 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 19:36:24.711 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-07 19:37:03.282 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 19:50:04.527 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 19:52:18.351 [http-nio-8080-exec-10] WARN  org.example.logica.LoginAdminServlet - Intento fallido: Administrador no encontrado - Vicente
+2025-12-07 19:52:18.351 [http-nio-8080-exec-10] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - Vicente
 2025-12-07 20:08:15.978 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:11:34.756 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.logica.RegistroServlet - --- INTENTO DE REGISTRO ---
-2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.logica.RegistroServlet - Nombre: VicenteH
-2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.logica.RegistroServlet - Email: vicentecallegero@gmail.com
-2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.logica.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
-2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.logica.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
-2025-12-07 20:12:45.164 [http-nio-8080-exec-2] WARN  org.example.logica.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteH
-2025-12-07 20:12:59.589 [http-nio-8080-exec-7] WARN  org.example.logica.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteH
+2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.controlador.RegistroServlet - Nombre: VicenteH
+2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.controlador.RegistroServlet - Email: vicentecallegero@gmail.com
+2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-07 20:12:09.880 [http-nio-8080-exec-6] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-07 20:12:45.164 [http-nio-8080-exec-2] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteH
+2025-12-07 20:12:59.589 [http-nio-8080-exec-7] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteH
 2025-12-07 20:13:36.801 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:16:10.715 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:16:42.526 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - --- INTENTO DE REGISTRO ---
-2025-12-07 20:16:42.531 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Nombre: VicenteH
-2025-12-07 20:16:42.531 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Email: vicentecallegero@gmail.com
-2025-12-07 20:16:42.531 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
-2025-12-07 20:16:42.533 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
-2025-12-07 20:16:53.780 [http-nio-8080-exec-2] WARN  org.example.logica.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteH
+2025-12-07 20:16:42.526 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-07 20:16:42.531 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Nombre: VicenteH
+2025-12-07 20:16:42.531 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Email: vicentecallegero@gmail.com
+2025-12-07 20:16:42.531 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-07 20:16:42.533 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-07 20:16:53.780 [http-nio-8080-exec-2] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteH
 2025-12-07 20:24:20.872 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:31:48.352 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
 2025-12-07 20:32:32.405 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:33:10.482 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:33:34.216 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - --- INTENTO DE REGISTRO ---
-2025-12-07 20:33:34.219 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - Nombre: VicenteH
-2025-12-07 20:33:34.219 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - Email: vicentecallegero@gmail.com
-2025-12-07 20:33:34.219 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
-2025-12-07 20:33:34.221 [http-nio-8080-exec-8] INFO  org.example.logica.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
-2025-12-07 20:33:35.235 [http-nio-8080-exec-8] ERROR org.example.logica.RegistroServlet - ⚠️ Falló la conexión con Firebase al guardar Admin.
+2025-12-07 20:33:34.216 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-07 20:33:34.219 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - Nombre: VicenteH
+2025-12-07 20:33:34.219 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - Email: vicentecallegero@gmail.com
+2025-12-07 20:33:34.219 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-07 20:33:34.221 [http-nio-8080-exec-8] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-07 20:33:35.235 [http-nio-8080-exec-8] ERROR org.example.controlador.RegistroServlet - ⚠️ Falló la conexión con Firebase al guardar Admin.
 2025-12-07 20:38:24.393 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:38:44.101 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:39:09.149 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - --- INTENTO DE REGISTRO ---
-2025-12-07 20:39:09.151 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Nombre: VicenteH
-2025-12-07 20:39:09.151 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Email: vicentecallegero@gmail.com
-2025-12-07 20:39:09.151 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Código Admin recibido: 'PORYECTO_2025'
-2025-12-07 20:39:09.152 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - ℹ️ El código NO coincide o está vacío. Registrando como CLIENTE...
-2025-12-07 20:39:10.037 [http-nio-8080-exec-7] ERROR org.example.logica.RegistroServlet - ⚠️ Falló la conexión con Firebase al guardar Usuario.
+2025-12-07 20:39:09.149 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-07 20:39:09.151 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Nombre: VicenteH
+2025-12-07 20:39:09.151 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Email: vicentecallegero@gmail.com
+2025-12-07 20:39:09.151 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PORYECTO_2025'
+2025-12-07 20:39:09.152 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - ℹ️ El código NO coincide o está vacío. Registrando como CLIENTE...
+2025-12-07 20:39:10.037 [http-nio-8080-exec-7] ERROR org.example.controlador.RegistroServlet - ⚠️ Falló la conexión con Firebase al guardar Usuario.
 2025-12-07 20:41:43.643 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:42:29.506 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:42:50.836 [http-nio-8080-exec-5] INFO  org.example.logica.RegistroServlet - --- INTENTO DE REGISTRO ---
-2025-12-07 20:42:50.839 [http-nio-8080-exec-5] INFO  org.example.logica.RegistroServlet - Nombre: VicenteH
-2025-12-07 20:42:50.839 [http-nio-8080-exec-5] INFO  org.example.logica.RegistroServlet - Email: vicentecallegero@gmail.com
-2025-12-07 20:42:50.839 [http-nio-8080-exec-5] INFO  org.example.logica.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
-2025-12-07 20:42:50.841 [http-nio-8080-exec-5] INFO  org.example.logica.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
-2025-12-07 20:42:53.449 [http-nio-8080-exec-5] INFO  org.example.logica.RegistroServlet - 🚀 Administrador guardado exitosamente en Firebase.
-2025-12-07 20:43:26.677 [http-nio-8080-exec-10] INFO  org.example.logica.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 20:42:50.836 [http-nio-8080-exec-5] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-07 20:42:50.839 [http-nio-8080-exec-5] INFO  org.example.controlador.RegistroServlet - Nombre: VicenteH
+2025-12-07 20:42:50.839 [http-nio-8080-exec-5] INFO  org.example.controlador.RegistroServlet - Email: vicentecallegero@gmail.com
+2025-12-07 20:42:50.839 [http-nio-8080-exec-5] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-07 20:42:50.841 [http-nio-8080-exec-5] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-07 20:42:53.449 [http-nio-8080-exec-5] INFO  org.example.controlador.RegistroServlet - 🚀 Administrador guardado exitosamente en Firebase.
+2025-12-07 20:43:26.677 [http-nio-8080-exec-10] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
 2025-12-07 20:44:04.195 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:45:50.941 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:46:08.502 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - --- INTENTO DE REGISTRO ---
-2025-12-07 20:46:08.506 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Nombre: Vicente
-2025-12-07 20:46:08.507 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Email: v.hernandez09@ufromail.cl
-2025-12-07 20:46:08.507 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - Código Admin recibido: ''
-2025-12-07 20:46:08.509 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - ℹ️ El código NO coincide o está vacío. Registrando como CLIENTE...
-2025-12-07 20:46:10.940 [http-nio-8080-exec-7] INFO  org.example.logica.RegistroServlet - 🚀 Usuario guardado exitosamente en Firebase.
+2025-12-07 20:46:08.502 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-07 20:46:08.506 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Nombre: Vicente
+2025-12-07 20:46:08.507 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Email: v.hernandez09@ufromail.cl
+2025-12-07 20:46:08.507 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: ''
+2025-12-07 20:46:08.509 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - ℹ️ El código NO coincide o está vacío. Registrando como CLIENTE...
+2025-12-07 20:46:10.940 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - 🚀 Usuario guardado exitosamente en Firebase.
 2025-12-07 20:47:10.638 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
 2025-12-07 20:47:24.787 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
-2025-12-07 20:47:53.512 [http-nio-8080-exec-3] INFO  org.example.logica.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 20:47:53.512 [http-nio-8080-exec-3] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
 2025-12-07 20:48:56.504 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:03:13.405 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:03:13.810 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:06:46.927 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:06:47.403 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:32:06.207 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:32:29.749 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:33:00.497 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:34:08.992 [http-nio-8080-exec-5] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 21:34:22.850 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:43:59.432 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:44:21.431 [http-nio-8080-exec-6] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-07 21:44:30.563 [http-nio-8080-exec-10] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 21:48:08.572 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:48:22.305 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:48:36.376 [http-nio-8080-exec-10] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 21:51:17.776 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 21:53:33.462 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 21:53:46.461 [http-nio-8080-exec-6] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-07 21:53:54.714 [http-nio-8080-exec-10] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 21:54:14.329 [http-nio-8080-exec-2] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 21:54:31.234 [http-nio-8080-exec-4] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 21:55:56.080 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
