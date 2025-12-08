@@ -55,6 +55,17 @@
         </div>
 
         <div class="col-md-6 col-lg-4">
+            <a href="reporteGeneral" class="text-decoration-none text-dark">
+                <div class="card card-menu p-4 text-center h-100">
+                    <div class="card-icon">📊</div>
+                    <h3 class="fw-bold">Reporte Total</h3>
+                    <p class="text-muted">Ver todos los datos del sistema en una sola vista.</p>
+                    <button class="btn btn-info btn-sm btn-custom mt-2 text-white">Ver Todo</button>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
             <a href="#" class="text-decoration-none text-dark">
                 <div class="card card-menu p-4 text-center h-100 opacity-50">
                     <div class="card-icon">👥</div>

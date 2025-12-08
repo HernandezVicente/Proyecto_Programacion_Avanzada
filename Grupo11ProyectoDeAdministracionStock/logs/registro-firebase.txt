@@ -150,3 +150,23 @@
 2025-12-07 21:54:14.329 [http-nio-8080-exec-2] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
 2025-12-07 21:54:31.234 [http-nio-8080-exec-4] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
 2025-12-07 21:55:56.080 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 22:05:44.797 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 22:05:59.507 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 22:08:02.258 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-07 22:08:21.044 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-07 22:08:33.799 [http-nio-8080-exec-9] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 22:09:06.735 [http-nio-8080-exec-2] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-07 22:10:01.295 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 04:54:43.866 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 04:55:09.163 [http-nio-8080-exec-9] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-08 04:55:44.761 [http-nio-8080-exec-5] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - VicenteHe
+2025-12-08 04:56:11.974 [http-nio-8080-exec-6] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-08 05:06:53.444 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:18:55.990 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:19:24.914 [http-nio-8080-exec-6] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-08 05:19:44.600 [http-nio-8080-exec-1] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-08 05:20:09.957 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:21:28.050 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:21:50.529 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginUsuarioServlet - Intento de login de usuario: v.hernandez09@ufromail.cl
+2025-12-08 05:21:53.880 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginUsuarioServlet - Usuario autenticado correctamente: v.hernandez09@ufromail.cl
+2025-12-08 05:23:29.175 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
