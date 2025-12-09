@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="org.example.modelo.Administrador" %>
 
-<%-- 🛡️ SEGURIDAD: Verificamos si hay un ADMIN logueado --%>
 <%
     Administrador admin = (Administrador) session.getAttribute("admin");
     if (admin == null) {

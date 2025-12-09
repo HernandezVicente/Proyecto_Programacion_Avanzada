@@ -17,9 +17,7 @@ import java.io.IOException;
 public class LoginUsuarioServlet extends HttpServlet {
 
     private static final Logger logger = LogManager.getLogger(LoginUsuarioServlet.class);
-
-    // Conectamos específicamente con la colección de "usuarios" (Clientes)
-    private final CRUDFireStore<Usuario> usuarioCRUD = new CRUDFireStore<>("usuarios", Usuario.class);
+    private final transient CRUDFireStore<Usuario> usuarioCRUD = new CRUDFireStore<>("usuarios", Usuario.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,27 +27,15 @@ public class LoginUsuarioServlet extends HttpServlet {
 
         try {
             logger.info("Intento de login de usuario: {}", emailInput);
-
-            // 1. Buscamos al usuario por su ID (que es el email)
             Usuario usuarioEncontrado = usuarioCRUD.obtenerPorId(emailInput);
 
             if (usuarioEncontrado != null) {
-
-                // 2. Encriptamos la contraseña que ingresó para compararla
                 String passHash = Encriptador.encriptar(passInput);
-
-                // 3. Verificamos coincidencia
                 if (passHash.equals(usuarioEncontrado.getPassword())) {
-
-                    // ✅ LOGIN EXITOSO
                     logger.info("Usuario autenticado correctamente: {}", emailInput);
-
                     HttpSession session = req.getSession();
-                    session.setAttribute("usuario", usuarioEncontrado); // Guardamos el objeto Usuario
+                    session.setAttribute("usuario", usuarioEncontrado);
                     session.setAttribute("rol", "CLIENTE");
-
-                    // REDIRECCIÓN AL DASHBOARD CENTRAL (El que creamos antes)
-                    // Él se encargará de mostrar dashboardCliente.jsp
                     resp.sendRedirect("dashboard");
 
                 } else {

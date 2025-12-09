@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*, org.example.modelo.Producto" %>
 
-<%-- 🛡️ SEGURIDAD: Verifica si hay un admin logueado --%>
 <%
     if (session.getAttribute("admin") == null) {
         response.sendRedirect("loginAdmin.jsp?error=acceso");
@@ -20,9 +19,12 @@
 <body>
 
 <div class="container container-admin">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="mb-0">Administración de Productos</h1>
-        <a href="logout.jsp" class="btn btn-outline-danger btn-sm">Cerrar Sesión</a>
+    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+        <h1 class="text-primary mb-0">Administración de Producto</h1>
+        <div>
+            <a href="dashboard" class="btn btn-secondary btn-custom">Volver al Panel de Control</a>
+            <a href="logout" class="btn btn-outline-danger btn-sm ms-2">Cerrar Sesión</a>
+        </div>
     </div>
 
     <div class="form-section">
@@ -109,7 +111,6 @@
 
 <script>
     function validarEliminar() {
-        // Validamos manualmente SOLO el código de barra
         const codigo = document.getElementById("codigoBarra").value;
         if (!codigo) {
             alert("⚠️ Escribe el Código de Barra para eliminar.");

@@ -24,14 +24,9 @@ import java.io.IOException;
 @WebServlet(name = "RegistroServlet", urlPatterns = {"/registro"})
 public class RegistroServlet extends HttpServlet {
 
-    // Logger para registrar eventos en consola y archivos .log
     private static final Logger logger = LogManager.getLogger(RegistroServlet.class);
-
-    // Instancias CRUD para manejar las colecciones de Firebase
-    private final CRUDFireStore<Usuario> usuarioCRUD = new CRUDFireStore<>("usuarios", Usuario.class);
-    private final CRUDFireStore<Administrador> adminCRUD = new CRUDFireStore<>("administradores", Administrador.class);
-
-    // Clave maestra para permitir el registro de administradores
+    private final transient CRUDFireStore<Usuario> usuarioCRUD = new CRUDFireStore<>("usuarios", Usuario.class);
+    private final transient CRUDFireStore<Administrador> adminCRUD = new CRUDFireStore<>("administradores", Administrador.class);
     private static final String CLAVE_SECRETA_ADMIN = "PROYECTO_2025";
 
     /**
@@ -45,30 +40,21 @@ public class RegistroServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            // 1. Recibir datos del formulario
             String nombre = req.getParameter("nombre");
             String email = req.getParameter("email");
             String passwordRaw = req.getParameter("password");
             String codigoAdmin = req.getParameter("codigoAdmin");
 
-            // Logs informativos (Debug)
             logger.info("--- INTENTO DE REGISTRO ---");
             logger.info("Nombre: {}", nombre);
             logger.info("Email: {}", email);
             logger.info("Código Admin recibido: '{}'", codigoAdmin);
 
-            // 2. Encriptar contraseña (SHA-256)
             String passwordHash = Encriptador.encriptar(passwordRaw);
 
-            // 3. Lógica de decisión: ¿Es Admin o Cliente?
             if (codigoAdmin != null && codigoAdmin.trim().equals(CLAVE_SECRETA_ADMIN)) {
-
-                // === REGISTRO DE ADMINISTRADOR ===
                 logger.info("✅ El código coincide. Registrando como ADMIN...");
-
                 Administrador nuevoAdmin = new Administrador(nombre, passwordHash);
-
-                // Intentamos guardar y capturamos el resultado (true/false)
                 boolean exito = adminCRUD.guardar(nombre, nuevoAdmin);
 
                 if (exito) {
@@ -80,13 +66,8 @@ public class RegistroServlet extends HttpServlet {
                 }
 
             } else {
-                // === ES USUARIO NORMAL (CLIENTE) ===
                 logger.info("ℹ️ El código NO coincide o está vacío. Registrando como CLIENTE...");
-
-                // 👇 AQUÍ ESTABA EL ERROR, ASÍ QUEDA CORREGIDO:
                 Usuario nuevoUsuario = new Usuario(email, nombre, email, passwordHash, "CLIENTE");
-
-                // Guardamos usando el email como ID del documento
                 boolean exito = usuarioCRUD.guardar(email, nuevoUsuario);
 
                 if (exito) {
@@ -99,7 +80,6 @@ public class RegistroServlet extends HttpServlet {
             }
 
         } catch (Exception e) {
-            // ❌ ERROR CRÍTICO DEL SERVIDOR
             logger.error("❌ ERROR CRÍTICO EN REGISTRO:", e);
             resp.sendRedirect("registro.jsp?error=servidor");
         }

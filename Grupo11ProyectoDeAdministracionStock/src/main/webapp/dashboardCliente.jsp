@@ -1,15 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="org.example.modelo.Usuario" %>
 
-<%-- 🛡️ SEGURIDAD: Solo Usuarios (Clientes) pueden ver esto --%>
 <%
-    // Verificamos si existe un "usuario" en la sesión (NO admin)
     if (session.getAttribute("usuario") == null) {
         response.sendRedirect("loginUsuario.jsp?error=acceso");
         return;
     }
 
-    // Obtenemos el objeto para saludarlo (opcional)
     Usuario usuario = (Usuario) session.getAttribute("usuario");
 %>
 
@@ -24,7 +21,6 @@
 <body>
 
 <div class="container container-admin text-center" style="max-width: 600px; margin-top: 100px;">
-
     <div style="font-size: 5rem; margin-bottom: 20px;">🚧</div>
 
     <h1 class="text-primary fw-bold">Hola, <%= usuario.getNombre() %></h1>

@@ -19,7 +19,8 @@ public class BodegaServlet extends HttpServlet {
     private static final Logger logger = LogManager.getLogger(BodegaServlet.class);
     private static final String ATTRIBUTE_ERROR = "error";
     private static final String JSP_PAGE = "bodega.jsp";
-    private final LogicaBodega logica;
+
+    private final transient LogicaBodega logica;
 
     public BodegaServlet() {
         this.logica = new LogicaBodega();

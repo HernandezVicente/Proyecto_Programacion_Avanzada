@@ -170,3 +170,229 @@
 2025-12-08 05:21:50.529 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginUsuarioServlet - Intento de login de usuario: v.hernandez09@ufromail.cl
 2025-12-08 05:21:53.880 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginUsuarioServlet - Usuario autenticado correctamente: v.hernandez09@ufromail.cl
 2025-12-08 05:23:29.175 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:34:58.510 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 05:34:58.601 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 05:34:58.706 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 05:34:58.846 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:34:59.469 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:36:16.341 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:38:38.977 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:39:06.562 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 05:39:06.667 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 05:39:06.786 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 05:39:06.963 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:39:07.646 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:43:12.228 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:43:12.725 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:43:12.764 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 05:43:12.782 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 05:43:12.804 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 05:43:44.626 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 05:43:44.698 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 05:43:44.800 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 05:43:44.966 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:43:45.436 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:48:07.487 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 05:48:07.574 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 05:48:07.708 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 05:48:07.846 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:48:08.556 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 05:54:04.181 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 05:54:04.280 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 05:54:04.399 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 05:54:04.570 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 05:54:05.190 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:06:27.196 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:06:27.268 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:06:27.361 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:06:27.564 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:06:28.477 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:06:28.512 [main] WARN  org.example.controlador.ProductoServlet - Error de formato en ProductoServlet: For input string: "mil"
+2025-12-08 06:06:28.550 [main] INFO  org.example.controlador.ProductoServlet - Producto eliminado ID: 1001
+2025-12-08 06:06:28.570 [main] INFO  org.example.controlador.ProductoServlet - Producto actualizado ID: 1001
+2025-12-08 06:06:28.627 [main] INFO  org.example.controlador.ProductoServlet - Producto creado: Coca Cola
+2025-12-08 06:08:16.366 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:08:16.427 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:08:16.509 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:08:16.615 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:08:17.159 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:08:17.182 [main] WARN  org.example.controlador.ProductoServlet - Error de formato en ProductoServlet: For input string: "mil"
+2025-12-08 06:08:17.203 [main] INFO  org.example.controlador.ProductoServlet - Producto eliminado ID: 1001
+2025-12-08 06:08:17.216 [main] INFO  org.example.controlador.ProductoServlet - Producto actualizado ID: 1001
+2025-12-08 06:08:17.238 [main] INFO  org.example.controlador.ProductoServlet - Producto creado: Coca Cola
+2025-12-08 06:08:54.164 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:08:54.267 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:08:54.383 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:08:54.538 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:08:55.079 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:19:28.801 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:19:28.857 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:19:28.931 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:19:29.030 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:19:29.493 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:30:08.891 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:30:08.984 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:30:09.075 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:30:09.212 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:30:09.823 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:38:24.764 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:38:24.834 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:38:24.918 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:38:25.037 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:38:25.618 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:38:25.658 [main] WARN  org.example.controlador.ProductoServlet - Error de formato en ProductoServlet: For input string: "mil"
+2025-12-08 06:38:25.700 [main] INFO  org.example.controlador.ProductoServlet - Producto eliminado ID: 1001
+2025-12-08 06:38:25.713 [main] INFO  org.example.controlador.ProductoServlet - Producto actualizado ID: 1001
+2025-12-08 06:38:25.744 [main] INFO  org.example.controlador.ProductoServlet - Producto creado: Coca Cola
+2025-12-08 06:39:09.594 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:39:09.680 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:39:09.768 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:39:09.886 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:39:10.397 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:40:19.611 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:40:59.764 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-08 06:43:26.599 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:48:58.958 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-08 06:48:59.048 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-08 06:48:59.157 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123
+2025-12-08 06:48:59.281 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-08 06:48:59.842 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-08 06:48:59.879 [main] WARN  org.example.controlador.ProductoServlet - Error de formato en ProductoServlet: For input string: "mil"
+2025-12-08 06:48:59.894 [main] INFO  org.example.controlador.ProductoServlet - Producto eliminado ID: 1001
+2025-12-08 06:48:59.905 [main] INFO  org.example.controlador.ProductoServlet - Producto actualizado ID: 1001
+2025-12-08 06:48:59.935 [main] INFO  org.example.controlador.ProductoServlet - Producto creado: Coca Cola
+2025-12-09 15:01:24.792 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 15:03:34.170 [http-nio-8080-exec-1] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-09 15:03:34.173 [http-nio-8080-exec-1] INFO  org.example.controlador.RegistroServlet - Nombre: Hola
+2025-12-09 15:03:34.173 [http-nio-8080-exec-1] INFO  org.example.controlador.RegistroServlet - Email: 1@corre.com
+2025-12-09 15:03:34.173 [http-nio-8080-exec-1] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: ''
+2025-12-09 15:03:34.175 [http-nio-8080-exec-1] INFO  org.example.controlador.RegistroServlet - ℹ️ El código NO coincide o está vacío. Registrando como CLIENTE...
+2025-12-09 15:03:39.129 [http-nio-8080-exec-1] INFO  org.example.controlador.RegistroServlet - 🚀 Usuario guardado exitosamente en Firebase.
+2025-12-09 15:03:57.027 [http-nio-8080-exec-5] INFO  org.example.controlador.LoginUsuarioServlet - Intento de login de usuario: 1@corre.com
+2025-12-09 15:03:57.461 [http-nio-8080-exec-5] INFO  org.example.controlador.LoginUsuarioServlet - Usuario autenticado correctamente: 1@corre.com
+2025-12-09 15:09:39.221 [http-nio-8080-exec-4] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-09 15:09:39.236 [http-nio-8080-exec-4] INFO  org.example.controlador.RegistroServlet - Nombre: Q°!"#$%U/325635
+2025-12-09 15:09:39.237 [http-nio-8080-exec-4] INFO  org.example.controlador.RegistroServlet - Email: 1@corre.com
+2025-12-09 15:09:39.237 [http-nio-8080-exec-4] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-09 15:09:39.237 [http-nio-8080-exec-4] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-09 15:09:39.254 [http-nio-8080-exec-4] ERROR org.example.controlador.RegistroServlet - ❌ ERROR CRÍTICO EN REGISTRO:
+java.lang.IllegalArgumentException: Path should point to a Document Reference: administradores
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:218) ~[guava-33.4.0-jre.jar:?]
+	at com.google.cloud.firestore.CollectionReference.document(CollectionReference.java:118) ~[google-cloud-firestore-3.32.2.jar:3.32.2]
+	at org.example.logica.CRUDFireStore.guardar(CRUDFireStore.java:53) ~[classes/:?]
+	at org.example.controlador.RegistroServlet.doPost(RegistroServlet.java:67) [classes/:?]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [servlet-api.jar:6.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [servlet-api.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) [catalina.jar:10.1.48]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) [catalina.jar:10.1.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) [catalina.jar:10.1.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) [catalina.jar:10.1.48]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) [catalina.jar:10.1.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:10.1.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:10.1.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:10.1.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) [tomcat-coyote.jar:10.1.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) [tomcat-coyote.jar:10.1.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) [tomcat-util.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) [tomcat-util.jar:10.1.48]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:10.1.48]
+	at java.base/java.lang.Thread.run(Thread.java:1447) [?:?]
+2025-12-09 15:09:58.872 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-09 15:09:58.872 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Nombre: Q°!"#$%U/325635
+2025-12-09 15:09:58.872 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Email: 1@corre.com
+2025-12-09 15:09:58.872 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-09 15:09:58.872 [http-nio-8080-exec-7] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-09 15:09:58.872 [http-nio-8080-exec-7] ERROR org.example.controlador.RegistroServlet - ❌ ERROR CRÍTICO EN REGISTRO:
+java.lang.IllegalArgumentException: Path should point to a Document Reference: administradores
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:218) ~[guava-33.4.0-jre.jar:?]
+	at com.google.cloud.firestore.CollectionReference.document(CollectionReference.java:118) ~[google-cloud-firestore-3.32.2.jar:3.32.2]
+	at org.example.logica.CRUDFireStore.guardar(CRUDFireStore.java:53) ~[classes/:?]
+	at org.example.controlador.RegistroServlet.doPost(RegistroServlet.java:67) [classes/:?]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) [servlet-api.jar:6.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) [servlet-api.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) [catalina.jar:10.1.48]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) [tomcat-websocket.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) [catalina.jar:10.1.48]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) [catalina.jar:10.1.48]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) [catalina.jar:10.1.48]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:654) [catalina.jar:10.1.48]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) [catalina.jar:10.1.48]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [catalina.jar:10.1.48]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-coyote.jar:10.1.48]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-coyote.jar:10.1.48]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) [tomcat-coyote.jar:10.1.48]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1774) [tomcat-coyote.jar:10.1.48]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-coyote.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) [tomcat-util.jar:10.1.48]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) [tomcat-util.jar:10.1.48]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-util.jar:10.1.48]
+	at java.base/java.lang.Thread.run(Thread.java:1447) [?:?]
+2025-12-09 15:12:06.309 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - --- INTENTO DE REGISTRO ---
+2025-12-09 15:12:06.310 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - Nombre: Kem
+2025-12-09 15:12:06.310 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - Email: v.hernandes@ufromail.cl
+2025-12-09 15:12:06.310 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - Código Admin recibido: 'PROYECTO_2025'
+2025-12-09 15:12:06.310 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - ✅ El código coincide. Registrando como ADMIN...
+2025-12-09 15:12:08.120 [http-nio-8080-exec-10] INFO  org.example.controlador.RegistroServlet - 🚀 Administrador guardado exitosamente en Firebase.
+2025-12-09 15:13:19.354 [http-nio-8080-exec-5] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - hola
+2025-12-09 15:13:40.384 [http-nio-8080-exec-9] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:13:50.497 [http-nio-8080-exec-1] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:14:00.097 [http-nio-8080-exec-7] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-09 15:14:14.873 [http-nio-8080-exec-9] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-09 15:14:19.937 [http-nio-8080-exec-1] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-09 15:14:25.697 [http-nio-8080-exec-3] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-09 15:14:34.013 [http-nio-8080-exec-5] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:15:27.342 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:17:10.076 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 15:17:32.289 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 15:17:46.524 [http-nio-8080-exec-3] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:18:09.753 [http-nio-8080-exec-7] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:19:26.175 [http-nio-8080-exec-5] WARN  org.example.controlador.LoginAdminServlet - Intento fallido: Administrador no encontrado - v.hernandez09@ufromail.cl
+2025-12-09 15:19:33.207 [http-nio-8080-exec-3] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:26:37.928 [http-nio-8080-exec-3] INFO  org.example.controlador.LoginUsuarioServlet - Intento de login de usuario: v.hernandez09@ufromail.cl
+2025-12-09 15:26:39.151 [http-nio-8080-exec-3] WARN  org.example.controlador.LoginUsuarioServlet - Contraseña incorrecta para usuario: v.hernandez09@ufromail.cl
+2025-12-09 15:27:10.276 [http-nio-8080-exec-9] INFO  org.example.controlador.LoginUsuarioServlet - Intento de login de usuario: v.hernandez09@ufromail.cl
+2025-12-09 15:27:10.815 [http-nio-8080-exec-9] INFO  org.example.controlador.LoginUsuarioServlet - Usuario autenticado correctamente: v.hernandez09@ufromail.cl
+2025-12-09 15:30:49.532 [http-nio-8080-exec-4] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:31:19.203 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 15:55:37.006 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 15:55:56.456 [http-nio-8080-exec-7] WARN  org.example.controlador.LoginAdminServlet - Intento fallido de admin: Contraseña incorrecta para VicenteH
+2025-12-09 15:56:03.142 [http-nio-8080-exec-9] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:56:26.987 [http-nio-8080-exec-6] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 326476587
+2025-12-09 15:56:34.655 [http-nio-8080-exec-5] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 964422
+2025-12-09 15:56:57.372 [http-nio-8080-exec-4] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:57:09.854 [http-nio-8080-exec-2] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 15:58:13.433 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 15:58:29.803 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 15:58:52.758 [http-nio-8080-exec-9] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 16:00:02.514 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 16:00:50.971 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 16:01:17.806 [http-nio-8080-exec-8] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 16:02:28.783 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 16:02:44.871 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 16:02:57.563 [http-nio-8080-exec-6] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 16:06:48.110 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 16:07:01.385 [RMI TCP Connection(2)-127.0.0.1] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 16:07:14.246 [http-nio-8080-exec-5] INFO  org.example.controlador.LoginAdminServlet - Administrador inició sesión: VicenteH
+2025-12-09 16:15:20.885 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 16:15:30.599 [main] WARN  org.example.controlador.ProductoServlet - Error de formato en ProductoServlet: For input string: "mil"
+2025-12-09 16:15:30.652 [main] INFO  org.example.controlador.ProductoServlet - Producto eliminado ID: 1001
+2025-12-09 16:15:30.670 [main] INFO  org.example.controlador.ProductoServlet - Producto actualizado ID: 1001
+2025-12-09 16:15:30.761 [main] INFO  org.example.controlador.ProductoServlet - Producto creado: Coca Cola
+2025-12-09 16:15:30.831 [main] INFO  org.example.config.FirebaseInitializer - 🧹 Firebase cerrado.
+2025-12-09 16:15:31.296 [main] INFO  org.example.config.FirebaseInitializer - ✅ Firebase inicializado correctamente.
+2025-12-09 16:15:31.327 [main] INFO  org.example.controlador.BodegaServlet - Bodega creada: Bodega Norte
+2025-12-09 16:15:31.344 [main] INFO  org.example.controlador.BodegaServlet - Bodega eliminada ID: 999
+2025-12-09 16:15:31.362 [main] INFO  org.example.controlador.BodegaServlet - Bodega actualizada ID: 123

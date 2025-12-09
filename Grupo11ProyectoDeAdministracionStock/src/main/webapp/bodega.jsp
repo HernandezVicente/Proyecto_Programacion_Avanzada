@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*, org.example.modelo.Bodega" %>
 
-<%-- 🛡️ SEGURIDAD: Solo Admins pueden entrar --%>
 <%
     if (session.getAttribute("admin") == null) {
         response.sendRedirect("loginAdmin.jsp?error=acceso");
@@ -20,9 +19,13 @@
 <body>
 
 <div class="container container-admin">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="mb-0">Administración de Bodegas</h1>
-        <a href="logout.jsp" class="btn btn-outline-danger btn-sm">Cerrar Sesión</a>
+
+    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+        <h1 class="text-primary mb-0">Administración de Bodegas</h1>
+        <div>
+            <a href="dashboard" class="btn btn-secondary btn-custom">Volver al Panel de Control</a>
+            <a href="logout" class="btn btn-outline-danger btn-sm ms-2">Cerrar Sesión</a>
+        </div>
     </div>
 
     <div class="form-section">
@@ -49,9 +52,7 @@
             <div class="text-center btn-group">
                 <button type="submit" name="accion" value="crear" class="btn btn-success btn-custom">➕ Agregar</button>
                 <button type="submit" name="accion" value="actualizar" class="btn btn-primary btn-custom">✏️ Actualizar</button>
-
                 <button type="submit" name="accion" value="eliminar" class="btn btn-danger btn-custom" formnovalidate onclick="return validarEliminar()">🗑️ Eliminar</button>
-
                 <button type="submit" name="accion" value="listar" class="btn btn-secondary btn-custom" formnovalidate>🔄 Listar</button>
             </div>
         </form>
@@ -102,9 +103,9 @@
         if (!id) {
             alert("⚠️ Por favor, ingresa el ID de la Bodega para eliminar.");
             document.getElementById("id").focus();
-            return false; // Detiene el envío
+            return false;
         }
-        return true; // Permite el envío
+        return true;
     }
 </script>
 </body>

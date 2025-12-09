@@ -44,19 +44,15 @@ public class Producto {
     public void setCodigoBarra(long codigoBarra) {
         this.codigoBarra = codigoBarra;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
     public void setPrecio(int precio) {
         this.precio = precio;
     }
-
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
